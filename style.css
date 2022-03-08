@@ -157,11 +157,14 @@ input[type="submit"]:hover {
     }
 
     .body {
-        flex: 3 0 max(45vw 350px);
+        flex: 3 0;
     }
 
     form.add-book {
         flex: 2 0 max(35vw 250px);
+        align-self: flex-start;
+        position: sticky;
+        top: 30px;
     }
 }
 
