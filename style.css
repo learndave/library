@@ -1,0 +1,167 @@
+:root {
+    --color-base: #e9f5f0;
+    --color-contrast: black;
+    --color-base-lighter: #ffffff;
+    --color-base-darker: #cbe4d9;
+    --color-contrast-light: #59615e;
+    --color-contrast-lighter: #909c98;
+    --color-button-ok: #579ac4;
+    --color-button-hover: #79b9e0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: max(50vw, 400px);
+    padding: 40px;
+
+    border-radius: 20px;
+    background-color: var(--color-base);
+
+    gap: 40px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.books {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    width: max(30vw, 300px);
+    padding: 15px;
+    border-radius: 10px;
+
+    background-color: var(--color-base-darker);
+}
+
+.book-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.book-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-contrast-light);
+}
+
+.author {
+    font-style: italic;
+}
+
+.add-book {
+    padding: 20px;
+    width: max(30vw, 250px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    border-radius: 20px;
+    background-color: var(--color-base);
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+input {
+    border: solid var(--color-contrast-lighter) 1px;
+    height: 25px;
+    padding: 0 10px;
+
+    font-size: 16px;
+    word-wrap: break-word;
+    border-radius: 7px;
+}
+
+label {
+    font-size: 12px;
+    color: var(--color-contrast-light);
+}
+
+.form-input.form-hasRead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    width: 17px;
+}
+
+
+input[type="submit"] {
+    background-color: var(--color-button-ok);
+    padding: 10px 40px;
+
+    border: none;
+    border-radius: 15px;
+    color: var(--color-base);
+    font-weight: 700;
+    font-size: 16px;
+
+    height: auto;
+    width: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-button-hover);
+}
+
+@media (min-width: 1000px) {
+    body {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .body {
+        flex: 3 0 max(45vw 350px);
+    }
+
+    form.add-book {
+        flex: 2 0 max(35vw 250px);
+    }
+}
+
